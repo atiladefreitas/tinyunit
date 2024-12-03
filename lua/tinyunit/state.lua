@@ -1,6 +1,7 @@
 local M = {}
 local config = require("tinyunit.config")
 
+-- get base font size
 local function get_base_font_size()
 	return config.options.base_font_size or 16
 end
