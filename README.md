@@ -24,7 +24,7 @@ https://github.com/user-attachments/assets/451ed70b-f771-447a-8186-d2cba03b32ee
 
 ```lua
 return {
-    "yourusername/tinyunit",
+    "atiladefreitas/tinyunit",
     config = function()
         require("tinyunit").setup({
             -- your custom config here (optional)
