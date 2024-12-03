@@ -2,6 +2,8 @@
 
 TinyUnit is a minimalist unit converter for Neovim, designed to seamlessly convert between different CSS units directly within your editor. Perfect for frontend developers who want to quickly convert measurements without leaving their editor.
 
+https://github.com/user-attachments/assets/451ed70b-f771-447a-8186-d2cba03b32ee
+
 ## 🚀 Features
 
 - 🪟 Convert units in a clean **floating window**
