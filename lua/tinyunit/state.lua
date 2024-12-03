@@ -38,7 +38,7 @@ M.conversions = {
 		to_cm = function(value)
 			return (value / CONSTANTS.PX_PER_INCH) * CONSTANTS.CM_PER_INCH
 		end,
-		to_inch = function(value)
+		to_in = function(value)
 			return value / CONSTANTS.PX_PER_INCH
 		end,
 		to_pt = function(value)
@@ -58,7 +58,7 @@ M.conversions = {
 		to_cm = function(value)
 			return (value * get_base_font_size() / CONSTANTS.PX_PER_INCH) * CONSTANTS.CM_PER_INCH
 		end,
-		to_inch = function(value)
+		to_in = function(value)
 			return (value * get_base_font_size()) / CONSTANTS.PX_PER_INCH
 		end,
 		to_pt = function(value)
@@ -78,7 +78,7 @@ M.conversions = {
 		to_cm = function(value)
 			return (value * get_base_font_size() / CONSTANTS.PX_PER_INCH) * CONSTANTS.CM_PER_INCH
 		end,
-		to_inch = function(value)
+		to_in = function(value)
 			return (value * get_base_font_size()) / CONSTANTS.PX_PER_INCH
 		end,
 		to_pt = function(value)
@@ -98,7 +98,7 @@ M.conversions = {
 		to_cm = function(value)
 			return value / 10
 		end,
-		to_inch = function(value)
+		to_in = function(value)
 			return value / CONSTANTS.MM_PER_INCH
 		end,
 		to_pt = function(value)
@@ -118,14 +118,14 @@ M.conversions = {
 		to_mm = function(value)
 			return value * 10
 		end,
-		to_inch = function(value)
+		to_in = function(value)
 			return value / CONSTANTS.CM_PER_INCH
 		end,
 		to_pt = function(value)
 			return (value / CONSTANTS.CM_PER_INCH) * CONSTANTS.PT_PER_INCH
 		end,
 	},
-	inch = {
+	["in"] = {
 		to_px = function(value)
 			return value * CONSTANTS.PX_PER_INCH
 		end,
@@ -161,7 +161,7 @@ M.conversions = {
 		to_cm = function(value)
 			return (value / CONSTANTS.PT_PER_INCH) * CONSTANTS.CM_PER_INCH
 		end,
-		to_inch = function(value)
+		to_in = function(value)
 			return value / CONSTANTS.PT_PER_INCH
 		end,
 	},
