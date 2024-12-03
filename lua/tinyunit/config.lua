@@ -1,7 +1,7 @@
 local M = {}
 
 -- Default font size constant
-local DEFAULT_FONT_SIZE = 14
+local DEFAULT_FONT_SIZE = 16
 
 M.defaults = {
 	window = {
@@ -27,23 +27,9 @@ M.defaults = {
 		"in",
 		"pt",
 	},
+	-- Simplified font configuration
 	font = {
-		-- Base font size in pixels, always defaults to 16
-		base_size = DEFAULT_FONT_SIZE,
-		presets = {
-			desktop = DEFAULT_FONT_SIZE, -- 16px
-			mobile = DEFAULT_FONT_SIZE, -- 16px
-			tablet = DEFAULT_FONT_SIZE, -- 16px
-			large_display = DEFAULT_FONT_SIZE, -- 16px
-		},
-		-- Scale factors relative to 16px base
-		scale_factors = {
-			heading1 = 2.0, -- 32px
-			heading2 = 1.5, -- 24px
-			heading3 = 1.25, -- 20px
-			small = 0.875, -- 14px
-			caption = 0.75, -- 12px
-		},
+		base_size = DEFAULT_FONT_SIZE, -- Base font size in pixels, always defaults to 16
 	},
 }
 

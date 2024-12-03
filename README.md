@@ -64,22 +64,7 @@ TinyUnit comes with sensible defaults that you can override:
         "pt",
     },
     font = {
-        base_size = 16,      -- Base font size in pixels (default: 16)
-        -- Font size presets for different environments
-        presets = {
-            desktop = 16,    -- Desktop font size
-            mobile = 16,     -- Mobile font size
-            tablet = 16,     -- Tablet font size
-            large_display = 16, -- Large display font size
-        },
-        -- Scale factors for relative units
-        scale_factors = {
-            heading1 = 2.0,    -- 32px
-            heading2 = 1.5,    -- 24px
-            heading3 = 1.25,   -- 20px
-            small = 0.875,     -- 14px
-            caption = 0.75,    -- 12px
-        },
+        base_size = 16,     -- Base font size in pixels (default: 16)
     },
 }
 ```
