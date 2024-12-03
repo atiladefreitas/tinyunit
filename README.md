@@ -37,6 +37,7 @@ return {
 
 TinyUnit comes with sensible defaults that you can override:
 
+
 ```lua
 {
     window = {
@@ -46,10 +47,10 @@ TinyUnit comes with sensible defaults that you can override:
         input_title = "Enter Value",
     },
     keymap = {
-        open = "<leader>tc", -- Toggle converter window
+        open = "tc", -- Toggle converter window
         close = "q",         -- Close window
-        convert = "<CR>",    -- Convert value
-        escape = "<Esc>",    -- Close window
+        convert = "",    -- Convert value
+        escape = "",    -- Close window
     },
     units = {
         "px",
@@ -61,6 +62,24 @@ TinyUnit comes with sensible defaults that you can override:
         "cm",
         "in",
         "pt",
+    },
+    font = {
+        base_size = 16,      -- Base font size in pixels (default: 16)
+        -- Font size presets for different environments
+        presets = {
+            desktop = 16,    -- Desktop font size
+            mobile = 16,     -- Mobile font size
+            tablet = 16,     -- Tablet font size
+            large_display = 16, -- Large display font size
+        },
+        -- Scale factors for relative units
+        scale_factors = {
+            heading1 = 2.0,    -- 32px
+            heading2 = 1.5,    -- 24px
+            heading3 = 1.25,   -- 20px
+            small = 0.875,     -- 14px
+            caption = 0.75,    -- 12px
+        },
     },
 }
 ```
@@ -99,7 +118,7 @@ TinyUnit supports conversions between the following units:
 
 - [ ] Custom conversion formulas
 - [ ] More unit types (deg, rad, etc.)
-- [ ] Configuration for base font size
+- [x] Configuration for base font size
 - [ ] Support for calc() expressions
 - [ ] Unit conversion history
 
