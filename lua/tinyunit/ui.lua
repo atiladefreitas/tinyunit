@@ -18,11 +18,23 @@ local function center_of_screen()
 	return math.floor(ui.width / 2), math.floor(ui.height / 2)
 end
 
+local function update_results_window_title()
+	if results_win_id and api.nvim_win_is_valid(results_win_id) then
+		local parent_size = config.options.parent_font_size
+		local title = string.format(" Unit Converter (Parent: %dpx) ", parent_size)
+		api.nvim_win_set_config(results_win_id, {
+			title = title,
+		})
+	end
+end
+
 local function create_windows()
 	local opts = config.options.window
 	local width = opts.width
 	local height = opts.height
 	local center_x, center_y = center_of_screen()
+
+	update_results_window_title()
 
 	input_buf_id = api.nvim_create_buf(false, true)
 	local input_win_opts = {

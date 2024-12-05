@@ -9,6 +9,10 @@ M.defaults = {
 		height = 15,
 		border = "rounded",
 		input_title = "Enter Value",
+		font = {
+			base_size = DEFAULT_FONT_SIZE,
+			parent_size = DEFAULT_FONT_SIZE,
+		},
 	},
 	keymap = {
 		open = "<leader>tc",
@@ -35,6 +39,7 @@ M.defaults = {
 
 M.options = {
 	base_font_size = DEFAULT_FONT_SIZE,
+	parent_font_size = DEFAULT_FONT_SIZE,
 }
 
 function M.setup(opts)
@@ -48,8 +53,23 @@ function M.setup(opts)
 		M.options.font.base_size = DEFAULT_FONT_SIZE
 	end
 
-	-- Always update base_font_size from font.base_size
+	-- Set parent font size to base size if not specified
+	M.options.font.parent_size = M.options.font.parent_size or M.options.font.base_size
+
+	-- Update both font sizes
 	M.options.base_font_size = M.options.font.base_size
+	M.options.parent_font_size = M.options.font.parent_size
+end
+
+-- Add function to update parent font size
+function M.set_parent_font_size(size)
+	if type(size) == "number" and size > 0 then
+		M.options.parent_font_size = size
+		M.options.font.parent_size = size
+		return true
+	end
+	vim.notify("Invalid parent font size. Must be a positive number.", vim.log.levels.ERROR)
+	return false
 end
 
 return M

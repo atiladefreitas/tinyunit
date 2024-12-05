@@ -6,6 +6,10 @@ local function get_base_font_size()
 	return config.options.base_font_size or 16
 end
 
+local function get_parent_font_size()
+	return config.options.parent_font_size or get_base_font_size()
+end
+
 M.base_units = {
 	"px",
 	"rem",
@@ -31,7 +35,7 @@ M.conversions = {
 			return value / get_base_font_size()
 		end,
 		to_em = function(value)
-			return value / get_base_font_size()
+			return value / get_parent_font_size()
 		end,
 		to_mm = function(value)
 			return (value / CONSTANTS.PX_PER_INCH) * CONSTANTS.MM_PER_INCH
@@ -51,7 +55,7 @@ M.conversions = {
 			return value * get_base_font_size()
 		end,
 		to_em = function(value)
-			return value
+			return (value * get_base_font_size()) / get_parent_font_size()
 		end,
 		to_mm = function(value)
 			return (value * get_base_font_size() / CONSTANTS.PX_PER_INCH) * CONSTANTS.MM_PER_INCH
@@ -71,7 +75,7 @@ M.conversions = {
 			return value * get_base_font_size()
 		end,
 		to_rem = function(value)
-			return value
+			return (value * get_parent_font_size()) / get_base_font_size()
 		end,
 		to_mm = function(value)
 			return (value * get_base_font_size() / CONSTANTS.PX_PER_INCH) * CONSTANTS.MM_PER_INCH

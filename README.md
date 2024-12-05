@@ -126,7 +126,7 @@ Special thanks to:
 - [Lazy.nvim](https://github.com/folke/lazy.nvim)
 - All contributors and users
 
-## My All plugins
+## All my plugins
 | Repository | Description | Stars |
 |------------|-------------|-------|
 | [LazyClip](https://github.com/atiladefreitas/lazyclip) | A Simple Clipboard Manager | ![Stars](https://img.shields.io/github/stars/atiladefreitas/lazyclip?style=social) |
